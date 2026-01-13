@@ -11,7 +11,7 @@ function App() {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
 
-  const API_URL = 'https://7pz7euzg1d.execute-api.us-west-2.amazonaws.com/Dev'; // Replace with your API Gateway URL
+  const API_URL = "https://7pz7euzg1d.execute-api.us-west-2.amazonaws.com/Dev"; // Replace with your API Gateway URL
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
