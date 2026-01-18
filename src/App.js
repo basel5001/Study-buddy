@@ -10,8 +10,26 @@ function App() {
   const [difficulty, setDifficulty] = useState('medium');
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [showResults, setShowResults] = useState(false);
+  const ThemeContext = React.createContext();
 
-  const API_URL = "https://7pz7euzg1d.execute-api.us-west-2.amazonaws.com/Dev"; // Replace with your API Gateway URL
+  const API_URL = "https://7pz7euzg1d.execute-api.us-west-2.amazonaws.com/Dev";
+
+
+  // function ThemeProvider({ children }) {
+  //   const [theme, setTheme] = useState('dark');
+  //   const [accentColor, setAccentColor] = useState('#667eea');
+
+  //   useEffect(() => {
+  //     document.documentElement.setAttribute('data-theme', theme);
+  //     document.documentElement.style.setProperty('--accent', accentColor);
+  //   }, [theme, accentColor]);
+
+  //   return (
+  //     <ThemeContext.Provider value={{ theme, setTheme, accentColor, setAccentColor }}>
+  //       {children}
+  //     </ThemeContext.Provider>
+  //   );
+  // }
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
