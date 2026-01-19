@@ -12,7 +12,7 @@ function App() {
   const [showResults, setShowResults] = useState(false);
   const ThemeContext = React.createContext();
 
-  const API_URL = "https://7pz7euzg1d.execute-api.us-west-2.amazonaws.com/Dev";
+  const API_URL = process.env.REACT_APP_API_URL;
 
 
   // function ThemeProvider({ children }) {
